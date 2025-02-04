@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="this">
+        <button>Change colour</button>
+    </div>
+    <span>
+        <button>hello if you click here than this text will be change</button>
+    </span>
+    
+</body>
+<script>
+    const btn =document.querySelector("button")
+    function random(number){
+        return Math.floor(Math.random()*(number+1));
+    }
+    btn.addEventListener("click",()=>{
+        const rndCol=`rgb(${random(255)} ${random(255)} ${random(255)})`;
+        document.body.style.backgroundColor=rndCol;
+    
+    });
+    document.querySelector("p")="Change";
+</script>
+</html>

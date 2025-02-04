@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <!-- <li><img width="200px" src="" alt="Flower" id="flower"></li> -->
+            <!-- <li><img width="200px" src="" alt="nature" id="nature" onclick="alert('clicked')"></li> -->
+            <li><img width="200px" src="https://images.unsplash.com/photo-1711560707076-d50fbf8a3a26?q=80&w=1056&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space image" id="space"></li>
+            <li><img width="200px" height="200px" src="https://plus.unsplash.com/premium_photo-1730828573938-003e14f210f4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="girl image" id="girl"></li>
+            <li><a  target="_blank" id="google" href="https://stackblitz.com/edit/dom-project-chaiaurcode?file=4-GuessTheNumber%2Fchaiaurcode.js,4-GuessTheNumber%2Fstyle.css,4-GuessTheNumber%2Findex.html">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    // document.getElementById('space').onclick = function(){
+    //     // alert("clicked")
+    // }
+
+    // document.getElementById('girl').addEventListener('click',function(){
+    //     // alert("clicked")
+    // },false)
+
+    document.getElementById('girl').addEventListener('click',function(e){
+        console.log(e);
+        // Type.timestamp , defaultPrevented, 
+        // target , toElement ,srcElement ,currentTarget,
+        // clientX ,clientY ,screenX ,screenY
+        // altkey , ctrlkey , shiftkey , keyCode
+    },false)
+
+    // Event Bubbling
+
+    // In this it start from the basic like first inner than outer
+
+    // document.getElementById('images').addEventListener('click',function(){
+    //     alert("The main ui is clicked")
+    // },false)
+
+    // document.getElementById('girl').addEventListener('click',function(){
+    //     alert("Particular girl is clicked")
+    // },false)
+
+    // When you write the bubbling with false it react with first inner and than outer 
+
+    // But when you use the true thann it wrok from the outside to inside
+
+    // Capturing and Bubbling 
+
+    // document.getElementById('girl').addEventListener('click',function(e){
+    //     console.log
+    //     ("Particular girl is clicked");
+
+    //     //When you use this further will be stopped 
+
+    //     e.stopPropagation()
+
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function (e){
+    //     e.preventDefault()
+    //     console.log("it is clicked on google");
+        
+    //     e.stopPropagation()
+    // },true)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e);
+        console.log(e.target.parentNode);
+        
+        // Now i want to remove the when i clicked on that it remove the image
+
+        let remove = e.target.parentNode
+        e.stopPropagation()
+
+        // remove.parentNode.removeChild(removeIt)
+
+        console.log(e.target.tagName);
+        if(e.target.tagName == 'IMG'){
+            remove.remove()
+        }
+        
+    })
+
+</script>
+</html>

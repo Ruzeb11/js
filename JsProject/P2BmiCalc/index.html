@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BMI  calculator</title>
+</head>
+<body>
+    <nav>
+        <span class="home">
+            <a href="/" aria-current="page">Hello</a>
+        </span>
+        <span class="home">
+            <a target="_blank" href="https://maps.app.goo.gl/Z35Q5fogHbsKBiaH8">HighlineCars</a>
+        </span>        
+    </nav>
+    <hr>
+    <main>
+        <div class="main">
+            <h1>BMI CALCULATOR</h1>
+            <form>
+                <div class="height">
+                    <span>Height in CM:</span>
+                    <input type="text" placeholder="Enter Your Height" required>
+                </div>
+                <br>
+                <div class="weight">
+                    <span>Weight in KG:</span>
+                    <input type="text" placeholder="Enter Your Weight" required>
+                </div>
+                <br>
+                <button>Calculate</button>
+                <span id="result"></span>
+                <span id="condition"></span>
+            </form>
+            <h3>BMI Weight Guide</h3>
+                <p>
+                    Under Weight = Less than 18.6
+                </p>
+                <p>
+                    Normal Range = 18.6 and 24.9
+                </p>
+                <p>
+                    Overweight = Greater than 24.9
+                </p>
+        </div>
+    </main>
+    <script src="bmi.js"></script>
+</body>
+</html>

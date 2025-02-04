@@ -1,0 +1,9 @@
+#start,#stop{
+    /* margin: 200px; */
+    background-color: rgb(0, 0, 0);
+    color: red;
+    font-weight: 500;
+    border-radius: 25px;
+    margin: 10px;
+    text-align: center;
+}

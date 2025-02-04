@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2 project with async js part-2</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        
+        // SETINTERVAL
+        const sayDate = function(){
+            console.log('Ruzeb Here the date is ',Date.now());
+
+        }
+        const interval = setInterval(sayDate,2000000000);
+
+        // CLEAR INTERVAL TO STOP THE SETINTERVAL
+        clearInterval(interval)
+
+        // IN THIS MY TASK IS THIS THAT WHEN I PRESS ON THE START BUTTON THE I NTERVAL START AND PRINT 
+        // WHEN I CLICK ON STOP THE CLEAR INTERVAL STOP THE PROCESS
+
+        const start = document.getElementById('start')
+        const stop = document.getElementById('stop')
+
+        let internalID ;
+
+        start.addEventListener('click',function (){
+            internal = setInterval(() => {
+                console.log("IT IS THE TASK",Date.now());
+            }, 1000);
+        })
+
+        stop.addEventListener('click',function(){
+            clearInterval(internal)
+        })
+
+    </script>
+</body>
+</html>
