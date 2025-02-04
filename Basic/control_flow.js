@@ -48,3 +48,6 @@ if (balance < 500){
 // && THIS IS AND MEANS ALL CONDITION MUST BE TRUE
 // || THIS IS OR MEANS ANY IF TRUE THAN 
 
+function james(){
+    return temprature
+}
